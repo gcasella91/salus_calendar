@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link restriction start -->
       <div class="col">
         <a href="/restrictions/<%= @restriction.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit restriction
         </a>
       </div>
-      <!-- Edit link restriction end -->
 
-      <!-- Delete link restriction start -->
       <div class="col">
         <a href="/delete_restriction/<%= @restriction.id %>" class="btn btn-block btn-outline-secondary">
           Delete restriction
         </a>
       </div>
-      <!-- Delete link restriction end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @restriction.user.present? %>
           <a href="/users/<%= @restriction.user_id %>">
@@ -40,28 +35,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@restriction.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@restriction.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
