@@ -51,6 +51,14 @@ class RestrictionsController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @restriction = Restriction.find(params.fetch("id_to_remove"))
+
+    @restriction.destroy
+
+    redirect_to("/users/#{@restriction.user_id}", notice: "Restriction deleted successfully.")
+  end
+
   def destroy_row
     @restriction = Restriction.find(params.fetch("id_to_remove"))
 
