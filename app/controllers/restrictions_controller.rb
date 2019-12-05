@@ -1,6 +1,7 @@
 class RestrictionsController < ApplicationController
   def index
-    @restrictions = Restriction.page(params[:page]).per(10)
+    @q = Restriction.ransack(params[:q])
+    @restrictions = @q.result(:distinct => true).includes(:user).page(params[:page]).per(10)
 
     render("restriction_templates/index.html.erb")
   end
