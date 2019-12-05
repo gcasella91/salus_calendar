@@ -1,6 +1,6 @@
 class RestrictionsController < ApplicationController
   def index
-    @restrictions = Restriction.all
+    @restrictions = Restriction.page(params[:page]).per(10)
 
     render("restriction_templates/index.html.erb")
   end
