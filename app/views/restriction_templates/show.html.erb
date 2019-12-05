@@ -34,7 +34,11 @@
       </dt>
       <!-- Display user_id start -->
       <dd>
-        <%= @restriction.user_id %>
+        <% if @restriction.user.present? %>
+          <a href="/users/<%= @restriction.user_id %>">
+            <%= @restriction.user.token_calendar %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display user_id end -->
 

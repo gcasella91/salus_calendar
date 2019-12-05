@@ -54,7 +54,11 @@
 
         <!-- Display restriction.user_id start -->
         <td>
-          <%= restriction.user.token_calendar %>
+          <% if restriction.user.present? %>
+            <a href="/users/<%= restriction.user.id %>">
+              <%= restriction.user.token_calendar %>
+            </a>
+          <% end %>
         </td>
         <!-- Display restriction.user_id end -->
 
