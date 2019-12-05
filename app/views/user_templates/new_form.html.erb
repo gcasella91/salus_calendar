@@ -1,0 +1,57 @@
+<h1>
+  Add a new user
+</h1>
+
+
+<hr>
+
+<!-- Form user start -->
+<form action="/create_user" method="post">
+<!-- Form user end -->
+
+  <!-- Label and input for token_calendar start -->
+  <div class="form-group">
+    <label for="token_calendar">
+      Token calendar
+    </label>
+
+    <!-- Input for token_calendar start -->
+    <input type="text" id="token_calendar" name="token_calendar" class="form-control">
+    <!-- Input for token_calendar end -->
+  </div>
+  <!-- Label and input for token_calendar end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for email start -->
+  <div class="form-group">
+    <label for="email">
+      Email
+    </label>
+
+    <!-- Input for email start -->
+    <input type="text" id="email" name="email" class="form-control">
+    <!-- Input for email end -->
+  </div>
+  <!-- Label and input for email end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create user
+  </button>
+</form>
+
+<hr>
+
+<a href="/users">
+  Go back
+</a>
