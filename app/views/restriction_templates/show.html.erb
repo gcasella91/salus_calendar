@@ -1,0 +1,64 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Restriction #<%= @restriction.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/restrictions" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link restriction start -->
+      <div class="col">
+        <a href="/restrictions/<%= @restriction.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit restriction
+        </a>
+      </div>
+      <!-- Edit link restriction end -->
+
+      <!-- Delete link restriction start -->
+      <div class="col">
+        <a href="/delete_restriction/<%= @restriction.id %>" class="btn btn-block btn-outline-secondary">
+          Delete restriction
+        </a>
+      </div>
+      <!-- Delete link restriction end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @restriction.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@restriction.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@restriction.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

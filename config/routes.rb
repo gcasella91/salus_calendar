@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Restriction resource:
+
+  # CREATE
+  get("/restrictions/new", { :controller => "restrictions", :action => "new_form" })
+  post("/create_restriction", { :controller => "restrictions", :action => "create_row" })
+
+  # READ
+  get("/restrictions", { :controller => "restrictions", :action => "index" })
+  get("/restrictions/:id_to_display", { :controller => "restrictions", :action => "show" })
+
+  # UPDATE
+  get("/restrictions/:prefill_with_id/edit", { :controller => "restrictions", :action => "edit_form" })
+  post("/update_restriction/:id_to_modify", { :controller => "restrictions", :action => "update_row" })
+
+  # DELETE
+  get("/delete_restriction/:id_to_remove", { :controller => "restrictions", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the User resource:
 
   # CREATE
