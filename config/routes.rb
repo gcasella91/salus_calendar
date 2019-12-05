@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/restrictions/new", { :controller => "restrictions", :action => "new_form" })
   post("/create_restriction", { :controller => "restrictions", :action => "create_row" })
+  post("/create_restriction_from_user", { :controller => "restrictions", :action => "create_row_from_user" })
 
   # READ
   get("/restrictions", { :controller => "restrictions", :action => "index" })

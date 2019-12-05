@@ -31,6 +31,20 @@ class RestrictionsController < ApplicationController
     end
   end
 
+  def create_row_from_user
+    @restriction = Restriction.new
+
+    @restriction.user_id = params.fetch("user_id")
+
+    if @restriction.valid?
+      @restriction.save
+
+      redirect_to("/users/#{@restriction.user_id}", notice: "Restriction created successfully.")
+    else
+      render("restriction_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @restriction = Restriction.find(params.fetch("prefill_with_id"))
 
